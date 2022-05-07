@@ -1,0 +1,20 @@
+// importando dependencia "express" que devuelve una funcion
+const express = require('express');
+
+// ejecutando function de express
+const app = express();
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
+// router inicial
+app.get('/', (req, res) => {
+  res.send('Holis');
+});
+
+// fallback router
+app.use((req, res) => {
+  res.render('404');
+});
+
+// escuchando desde express en puerto 3000
+app.listen(3000, () => { console.log('Listening on port: 3000'); });
