@@ -3,12 +3,13 @@ const express = require('express');
 
 // ejecutando function de express
 const app = express();
+app.use(express.static('public'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 // router inicial
 app.get('/', (req, res) => {
-  res.send('Holis');
+  res.render('index');
 });
 
 // fallback router
