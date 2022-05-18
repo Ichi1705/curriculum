@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 
 // router inicial
 app.get('/', (req, res) => {
