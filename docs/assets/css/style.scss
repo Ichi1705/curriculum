@@ -2,3 +2,11 @@
 ---
 
 @import "{{ site.theme }}";
+
+
+nav.nav2 {
+  right: 10%;
+  left: auto;
+  margin-left: auto;
+  text-align: left;
+}

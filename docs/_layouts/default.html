@@ -38,13 +38,20 @@
       </div><!-- end banner -->
 
     <div class="wrapper">
-      <nav>
+      <nav class="nav1">
         <ul></ul>
       </nav>
       <section>
         {{ content }}
 
       </section>
+      <nav class="nav2">
+        <ul>
+          {% for currentPage in site.pages %}
+            <li><a href="{{currentPage.url}}">{{ currentPage.title }} - {{ currentPage.collection }}</a></li>
+          {% endfor %}  
+        </ul>
+      </nav>
       <footer>
         {% if site.github.is_project_page %}
           <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
