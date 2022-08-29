@@ -50,9 +50,8 @@
           {% for cc in site.collections %}
             <li>{{ cc.label }}
                <ul>
-                <li>{{cc}}</li>
-                {% for f in cc.files %}
-                <li><a href="{{f.url}}">{{f.path}}</a></li>
+                {% for f in cc.collections[cc.labe] %}
+                <li><a href="{{site.url}}{{f.url | relative }}">{{ f.title }}</a></li>
                 {% endfor %}
                </ul>
             </li>
