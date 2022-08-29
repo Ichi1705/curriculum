@@ -51,11 +51,19 @@
             <li>{{ cc.label }}
                <ul>
                 {% for d in cc.docs %}
-                <li><a href="{{d.url}}">{{d.url}}</a></li>
+                <script>console.log("{{d}}")</script>
+                <li><a href="{{d.url}}">{{d.path}}</a></li>
                 {% endfor %}
                </ul>
             </li>
           {% endfor %}
+          <li>All pages
+            <ul>
+             {% for p in site.pages %}
+             <li><a href="{{site.url}}{{currentPage.url | relative }}">{{ currentPage.title }}</a></li>
+             {% endfor %}
+            </ul>
+         </li>
         </ul>
       </nav>
       <footer>
