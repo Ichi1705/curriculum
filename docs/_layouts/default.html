@@ -47,9 +47,15 @@
       </section>
       <nav class="nav2">
         <ul>
-          {% for currentPage in site.pages %}
-            <li><a href="{{site.url}}{{currentPage.url}}">{{ currentPage.title }} - {{ currentPage.collection }}</a></li>
-          {% endfor %}  
+          {% for cc in site.collections %}
+            <li>{{ cc.label }}
+               <ul>
+                {% for d in cc.docs %}
+                <li><a href="{{d.url}}">{{d.url}}</a></li>
+                {% endfor %}
+               </ul>
+            </li>
+          {% endfor %}
         </ul>
       </nav>
       <footer>
