@@ -48,7 +48,7 @@
       <nav class="nav2">
         <ul>
           {% for currentPage in site.pages %}
-            <li><a href="{{currentPage.url}}">{{ currentPage.title }} - {{ currentPage.collection }}</a></li>
+            <li><a href="{{currentPage.url | relative }}">{{ currentPage.title }} - {{ currentPage.collection }}</a></li>
           {% endfor %}  
         </ul>
       </nav>
