@@ -50,9 +50,8 @@
           {% for cc in site.collections %}
             <li>{{ cc.label }}
                <ul>
-                {% for d in cc.docs %}
-                <script>console.log("{{d}}")</script>
-                <li><a href="{{d.url}}">{{d.path}}</a></li>
+                {% for f in cc.pages %}
+                <li><a href="{{f.url}}">{{d.path}}</a></li>
                 {% endfor %}
                </ul>
             </li>
