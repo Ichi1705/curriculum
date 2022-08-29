@@ -60,7 +60,7 @@
           <li>All pages
             <ul>
              {% for p in site.pages %}
-             <li><a href="{{site.url}}{{currentPage.url | relative }}">{{ currentPage.title }}</a></li>
+             <li><a href="{{site.url}}{{p.url | relative }}">{{ p.title }}</a></li>
              {% endfor %}
             </ul>
          </li>
