@@ -4,6 +4,3 @@ plugins:
 url: https://ichi1705.github.io/curriculum
 collections:
   collections_dir: _collections
-  projects:
-    output: true
-    permalink: /:collection/:path/
